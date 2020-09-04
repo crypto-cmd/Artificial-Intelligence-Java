@@ -73,28 +73,29 @@ for (var i = 0; i < MAX_EPS; i++) {
 
 ### Useful Data Structures of the Library
 
--   Matrix
+-   Matrix\<T> - A 3D data storage of Array\<Array\<Array\<T>>>
 
     ```Java
     var matrix = new Matrix<String>(depth=1, row, col)
     matrix = matrix.map((Object[] o) -> Math.random() > 0.5 ? "John" : "Bob");
     ```
 
--   Tuple
+-   Tuple - Immutable structure of data
 
     ```Java
     var intTuple = new Tuple<Integer>(1, 2, 3);
+    int i = intArray.get(0);
     var stringTuple = new Tuple<String>("John", "Bob", "Angela");
     ```
 
--   Array - Static. therefore will not change size
+-   Array - Static 1D data structure, therefore will not change size
     ```Java
     var intArray = new Array<Integer>(length=2);
     var stringArray = intArray.map((Object[] o) -> "John");
     var doubleArray = Array.from(new Double[]{0d, 2.1, 3});
     var doubleArray2 = Array.add(intArray, doubleArray);
     ```
--   Function - Has unlimited Parameters
+-   Function - Lambda function with unlimited Parameters
 
 ### Current Environments
 
